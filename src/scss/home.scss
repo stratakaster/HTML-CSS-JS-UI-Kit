@@ -1,3 +1,108 @@
 //====================================================================================================
+.infinity-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  width: 300px;
+  height: 600px;
+  border: 1px solid #cccccc;
+  margin: rem(20);
+  background-color: $mainColor;
+}
+a {
+  position: relative;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  padding: rem(10) rem(30);
+  transition: .5s;
+}
+a:hover {
+  letter-spacing: 0.25em;
+}
+.infinity-button__one-color:hover {
+  letter-spacing: 0.25em;
+  background-color: $oneColor;
+  color: $oneColor;
+  box-shadow: 0 0 rem(35) $oneColor;
+}
+.infinity-button__two-color:hover {
+  background-color: $twoColor;
+  color: $twoColor;
+  box-shadow: 0 0 rem(35) $twoColor;
+}
+.infinity-button__three-color:hover {
+  background-color: $threeColor;
+  color: $threeColor;
+  box-shadow: 0 0 rem(35) $threeColor;
+}
+a::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background-color: #27282c;
+}
+a span {
+  position: relative;
+  z-index: 1;
+}
+a i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+a i::before {
+  content: '';
+  position: absolute;
+  top: rem(-2);
+  left: 80%;
+  width: rem(12);
+  height: rem(6);
+  background-color: #27282c;
+  transform: translate(-50%);
+  transition: .5s;
+}
+.infinity-button__one-color i::before {
+  border: 2px solid $oneColor;
 
+}
+.infinity-button__two-color i::before {
+  border: 2px solid $twoColor;
+}
+.infinity-button__three-color i::before {
+  border: 2px solid $threeColor;
+}
+a:hover i::before {
+  width: rem(18);
+  left: 20%;
+}
+a i::after {
+  content: '';
+  position: absolute;
+  bottom: rem(-2);
+  left: 20%;
+  width: rem(12);
+  height: rem(6);
+  background-color: #27282c;
+  transform: translate(-50%);
+  transition: .5s;
+}
+.infinity-button__one-color i::after {
+  border: 2px solid $oneColor;
+}
+.infinity-button__two-color i::after {
+  border: 2px solid $twoColor;
+}
+.infinity-button__three-color i::after {
+  border: 2px solid $threeColor;
+}
+a:hover i::after {
+  width: rem(18);
+  left: 80%;
+}
 //====================================================================================================
